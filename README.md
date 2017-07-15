@@ -48,7 +48,10 @@ I tried the following filters in order to find the binary threshold:-
 
 1) Absolute Sobel threshold
 
-2) HSV thresholds
+2) HLS thresholds
+
+3) LAB thresholds
+
 
 The image after a perspective transform and various thresholds looked like following:-
 
@@ -56,7 +59,7 @@ The image after a perspective transform and various thresholds looked like follo
 
 The final image was constructed using the following combination:-
 
-combined[(((gradx == 1) & (mag_binary == 0))|(s_binary==1) )] = 1
+combined[(((gradx == 1) & (mag_binary == 0))|(s_binary==1)|(la==1) )] = 1
 
 ### 4) Detecting Lines in the image
 
@@ -114,7 +117,7 @@ Here is a snapshot of the diagram of how the image flows through the entire proc
 
 ## Link to the Final Video
 
-The link to the final video is:- https://youtu.be/jnbOqsXacK4
+The link to the final video is:- https://youtu.be/CMmFzbFdm-g
 
 
 ## Discussion
